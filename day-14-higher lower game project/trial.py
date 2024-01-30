@@ -22,3 +22,38 @@ def compare_age(nested_list):
 # Example usage
 compare_age(nested_list)
 
+# Example nested list with dictionaries
+nested_list = [
+    {'name': 'John', 'age': 25},
+    {'name': 'Alice', 'age': 30},
+    {'name': 'Bob', 'age': 22},
+    {'name': 'Eva', 'age': 35}
+]
+
+# Function to find and compare the dictionary with the highest 'age'
+def compare_and_replace_highest_age(nested_list):
+    highest_age_dict = None
+    for dictionary in nested_list:
+        if highest_age_dict is None or dictionary['age'] > highest_age_dict['age']:
+            highest_age_dict = dictionary
+
+    print(f"Dictionary with the highest age: {highest_age_dict}")
+
+    # Now, let's compare with another dictionary
+    new_dictionary = {'name': 'Charlie', 'age': 28}
+
+    if new_dictionary['age'] > highest_age_dict['age']:
+        print(f"The new dictionary has a higher age, replacing the previous one.")
+        highest_age_dict = new_dictionary
+    else:
+        print("The new dictionary does not have a higher age than the stored one.")
+
+    print(f"Updated dictionary with the highest age: {highest_age_dict}")
+
+# Example usage
+compare_and_replace_highest_age(nested_list)
+
+
+   
+
+
