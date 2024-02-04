@@ -37,7 +37,7 @@ while game_on:
             # Update account_B for the next round
             account_B = random.choice(data_import)
         else:
-            print(f'No {account_A["name"]} has the highest points')
+            print(f'No {account_B["name"]} has the highest points')
             game_on = False
     elif user_input == 'B':
         if account_A['follower_count'] < account_B['follower_count']:
@@ -46,7 +46,7 @@ while game_on:
             # Update account_A for the next round
             account_A = random.choice(data_import)
         else:
-            print(f'No {account_B["name"]} has the highest points')
+            print(f'No {account_A["name"]} has the highest points')
             game_on = False
     else:
         print('Wrong input')
