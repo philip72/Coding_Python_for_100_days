@@ -20,3 +20,6 @@ table.add_column('Pokeman', ['Pikachu', 'Squirtle', 'Charmander']) ;table.add_co
 #this is the attribute
 table.align='l'
 print(table)
+
+import pandas as pd 
+
