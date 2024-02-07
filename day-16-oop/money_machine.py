@@ -35,17 +35,17 @@ class MoneyMachine:
             print("Invalid cost. Money refunded.")
         return False
 
-# Example usage
-money_machine = MoneyMachine()
+# # Example usage
+# money_machine = MoneyMachine()
 
-# Display initial profit
-money_machine.report()
+# # Display initial profit
+# money_machine.report()
 
-# Example cost for a drink
-drink_cost = 2.5
+# # Example cost for a drink
+# drink_cost = 2.5
 
-# Make a payment
-payment_accepted = money_machine.make_payment(drink_cost)
+# # Make a payment
+# payment_accepted = money_machine.make_payment(drink_cost)
 
-# Display updated profit after making a payment
-money_machine.report()
+# # Display updated profit after making a payment
+# money_machine.report()
