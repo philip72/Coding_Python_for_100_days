@@ -30,3 +30,7 @@ if found_item:
     found_item.display_info()
 else:
     print(f"{order_name} not found in the menu.")
+
+
+money_machine=MoneyMachine()
+money_machine.report()
