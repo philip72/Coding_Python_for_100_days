@@ -40,19 +40,19 @@ class CoffeeMaker:
             self.resources[ingredient] -= amount
         print(f"Enjoy your {order.name}!")
 
-# # Example usage
-# coffee_maker = CoffeeMaker()
+# Example usage
+coffee_maker = CoffeeMaker()
 
-# # Display initial resources
-# coffee_maker.report()
+# Display initial resources
+coffee_maker.report()
+from menu import Menu, MenuItem
+# Example MenuItem
+latte_ingredients = {"water": 200, "coffee": 16, "milk": 150}
+latte = MenuItem(name="Latte", cost=2.5, ingredients=latte_ingredients)
 
-# # Example MenuItem
-# latte_ingredients = {"water": 200, "coffee": 16, "milk": 150}
-# latte = MenuItem(name="Latte", cost=2.5, ingredients=latte_ingredients)
+# Check if resources are sufficient for the latte
+if coffee_maker.is_resource_sufficient(latte):
+    coffee_maker.make_coffee(latte)
 
-# # Check if resources are sufficient for the latte
-# if coffee_maker.is_resource_sufficient(latte):
-#     coffee_maker.make_coffee(latte)
-
-# # Display updated resources after making the latte
-# coffee_maker.report()
+# Display updated resources after making the latte
+coffee_maker.report()
