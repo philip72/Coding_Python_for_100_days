@@ -31,12 +31,8 @@ if found_item:
 else:
     print(f"{order_name} not found in the menu.")
 
-<<<<<<< HEAD
 #coffeemaker
 
 money_machine= MoneyMachine()
 
 money_machine.report()
-=======
-
->>>>>>> 96120e79f95b427e71cf74ad9fd272ab2af17a25
