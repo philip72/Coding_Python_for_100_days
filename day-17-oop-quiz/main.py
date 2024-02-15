@@ -25,3 +25,59 @@ print(f'user_1 followers {user_1.followers}')
 """ tapping into the attribute"""
 
 print(user_1.id)
+
+import data
+
+# question, answer= data.generate_true_false_question()
+
+# my_answer= input('whats your answer').capitalize()
+
+# if my_answer== answer:
+#     print('Correct')
+# else: 
+#     print('wrong')
+
+import question_model
+from quiz_brain import QuizBrain
+question_data=[]
+
+my_list=data.create_question_data()
+
+for i in my_list:
+    question_text= i['text']
+    question_answer=i['answer']
+    question= question_model.Question(question_text,question_answer)
+    question_data.append(question)
+
+
+quiz= QuizBrain(question_data)
+
+while quiz.still_has_questions():
+    quiz.next_question()
+print("You have finished the questions")
+
+print(f'Your score is {quiz.score}/{quiz.question_number}')
+
+
+# print(my_list)
+
+# for i in my_list:
+#      for key, value in i.items():
+#           print(key, value)
+
+import random 
+
+choosen_random= random.choice(my_list)
+print(choosen_random['text'])
+print(choosen_random['answer'])
+
+question_test= question_model.Question(choosen_random['text'], choosen_random['answer'])
+
+#print(question_test)
+
+# for i in range(0,1):
+#     for key, value in choosen_random.items():
+#         print(key, value)
+#         i+=1
+        
+     
