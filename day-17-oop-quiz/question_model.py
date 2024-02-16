@@ -3,6 +3,7 @@ class Question:
         self.text = text
         self.answer = answer
 
-   
+    def __str__(self) -> str:
+        return f'the text is {self.text} and answer is {self.answer}'
 
 
