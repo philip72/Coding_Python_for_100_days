@@ -16,6 +16,7 @@ for color in colors:
     rgb_colors.append(new_color)
 
 tut= t.Turtle()
+tut.speed(9)
 
 
 
