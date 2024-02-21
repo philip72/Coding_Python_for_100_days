@@ -4,6 +4,5 @@ class Question:
         self.answer = answer
 
     def __str__(self) -> str:
-        return f'the text is {self.text} and answer is {self.answer}'
-
+        return f'the text is {self.text} and answer is {self.answer}'    
 
