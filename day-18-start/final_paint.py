@@ -1,9 +1,10 @@
-import turtle as t
+import turtle as turtle_module
 import random
-import colorgram as cg
+import colorgram as cg  
+
 
 # Extract colors from 'sweet_pic.jpg' image using colorgram library
-colors = cg.extract('sweet_pic.jpg', 30)
+colors = cg.extract('image.jpg', 30)
 
 # Initialize an empty list to store RGB colors extracted from the image
 rgb_colors = []
@@ -16,31 +17,30 @@ for color in colors:
     new_color = (r, g, b)
     rgb_colors.append(new_color)
 
-# Initialize a Turtle object and set its speed
-tut = t.Turtle()
-tut.speed(9)
+print(rgb_colors)
 
-# Set color mode to 255 to use RGB color values
-t.colormode(255)
+turtle_module.colormode(255)
+tim= turtle_module.Turtle()
 
-# Set the initial heading and position of the turtle
-tut.setheading(225)
-tut.forward(300)
-tut.setheading(0)
+tim.hideturtle()
+tim.setheading(225)
+tim.forward(300)
+tim.setheading(0)
+number_of_dots= 100
 
-# Draw dots with random colors selected from the extracted RGB colors
-for _ in range(20):
-    tut.dot(20, random.choice(rgb_colors))
-    tut.forward(50)
+for _ in range(1, number_of_dots+1):
+    tim.dot(20,random.choice(rgb_colors))
+    tim.forward(50)
+    if _ % 10 ==0:
+        tim.setheading(90)
+        tim.forward(50)
+        tim.setheading(180)
+        tim.forward(500)
+        tim.setheading(0)
 
-# Define a function to generate random RGB colors
-def random_color():
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    random_colors = (r, g, b)
-    return random_colors
 
-# Create a screen for the turtle graphics and exit on click
-screen = t.Screen()
+
+screen= turtle_module.Screen()
+
 screen.exitonclick()
+
