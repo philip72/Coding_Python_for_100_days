@@ -55,7 +55,7 @@ class BlackJack:
             else:
                 should_continue = input("Type 'y' to get another card, 'n' to pass: ").lower()
                 if should_continue == 'y':
-                    user_cards.append(deal_card())
+                    user_cards.append(self.deal_cards())
                 else:
                     game_over = True
         while computer_score !=0 and computer_score<17 :
