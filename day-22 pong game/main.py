@@ -23,5 +23,5 @@ game_on=True
 while game_on:
     screen.update()
 
-# Exit the game when the user clicks anywher
+# Exit the game when the user clicks anywhere
 screen.exitonclick()
