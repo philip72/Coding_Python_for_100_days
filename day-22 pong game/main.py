@@ -1,5 +1,9 @@
+# Import necessary modules
 from turtle import Turtle, Screen
 from paddle import Paddle
+from pong_ball import PongBall
+from scoreboard import Scoreboard
+import time
 from pong_ball import PongBall
 from scoreboard import Scoreboard
 import time
@@ -7,6 +11,7 @@ import time
 
 screen = Screen()
 screen.bgcolor('black')
+screen.setup(width=800, height=600)
 screen.setup(width=800, height=600)
 screen.title('Pong Game')
 screen.tracer(0)
@@ -52,4 +57,6 @@ while game_on:
         pong_ball.reset_position()
         score_board.r_point()
 
+# Exit the game when the user clicks anywhere
 screen.exitonclick()
+
