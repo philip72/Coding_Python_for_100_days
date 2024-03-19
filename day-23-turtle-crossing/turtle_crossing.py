@@ -7,9 +7,11 @@ class TurtleCrossing(Turtle):
     
     def create_turtle(self):
         self.shape('turtle')
-        self.color('white')
+        self.color('red')
         self.penup()
         self.goto(0,-300)
+        self.left(90)
+
     
     def go_up(self):
         new_y=self.ycor()+20

@@ -3,8 +3,7 @@ from turtle_crossing import TurtleCrossing
 
 screen= Screen()
 screen.bgcolor('black')
-screen.setup(width=800, height=600)
-screen.setup(width=800, height=600)
+screen.setup(width=800, height=700)
 screen.title('Turtle Crossing Road')
 screen.tracer(0)
 
